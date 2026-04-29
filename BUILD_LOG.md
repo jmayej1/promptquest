@@ -12,6 +12,7 @@ PromptQuest is a gamified AI fluency trainer for beginners, built for the Handsh
 
 | Current session | Verified live Milestone 1 deployment | Opened the Vercel URL and confirmed the landing page, View missions button, mission map, progress preview, and five mission cards work on the live site | Noted remaining polish issue: skill labels and Build Notes heading need stronger contrast later |
 | Current session | Completed latest improvement pass | Improved mission card copy for business/career relevance; added the AI Fluency Loop: Use, Direct, Context, Evaluate, Protect, Decide; strengthened Try prompts; refined Hallucination Hunt and Human Judgment Check for verification, fairness, AI usefulness, and human accountability; added Current Version / Coming Next section | Tested landing page, mission map, all five mission screens, Back to mission map behavior, scroll behavior, and mobile preview |
+| Current session | Improved Try and lesson experience | Added non-scored Try text areas so users can type practice responses; kept feedback and scoring clearly planned next; polished mission lesson screens visually with CSS only | Confirmed Learn, See, Try, Reflect still work; tested typing in Try areas, Back to mission map behavior, scroll behavior, and mobile preview |
 
 Update BUILD_LOG.md only.
 

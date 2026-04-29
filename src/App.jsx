@@ -97,12 +97,20 @@ function App() {
               <p className="step-label">Try</p>
               <h2 id="try-heading">Practice goal</h2>
               <p>{selectedMission.practiceGoal}</p>
+              <label className="try-response-label" htmlFor="try-response">
+                Your response
+              </label>
+              <textarea
+                className="try-response"
+                id="try-response"
+                placeholder="Use the Try prompt above to practice your response."
+                rows="5"
+              ></textarea>
               <button type="button" className="disabled-button" disabled>
                 Practice coming soon
               </button>
               <p className="coming-soon-help">
-                Use the Try prompt above for now. Interactive practice and
-                scoring are planned next.
+                Feedback and scoring are planned next.
               </p>
             </section>
 
