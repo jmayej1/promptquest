@@ -4,7 +4,7 @@ export const missions = [
     title: 'The Vague Prompt Trap',
     skill: 'Direct',
     shortDescription:
-      'Practice guiding an AI tool with a clear goal, audience, and useful boundaries.',
+      'Turn unclear workplace requests into AI instructions with a task, audience, constraints, and format.',
     whyItMatters:
       'At work, unclear AI use often leads to generic or risky output. Clear direction helps you get a useful draft while still checking the result.',
     beginnerLesson:
@@ -13,7 +13,7 @@ export const missions = [
     betterExample:
       'Ask AI to draft a friendly 150-word email for first-year students that explains the paid summer internship, deadline, and application link.',
     practiceGoal:
-      'Turn a broad AI request into clear direction with a goal, audience, format, and key details.',
+      'Before asking AI for help, write down: What task do I want done? Who is the audience? What format do I need? What details would make the result useful?',
     workplaceRule:
       'If a coworker would need clearer direction to do the task well, the AI probably needs it too.',
   },
@@ -22,7 +22,7 @@ export const missions = [
     title: 'Context Quest',
     skill: 'Context',
     shortDescription:
-      'Learn which background details help AI support the real workplace task.',
+      'Decide which business details help AI tailor a useful response, and which details should stay out.',
     whyItMatters:
       'AI tools can give generic answers when they do not know the situation. Good context helps the response fit the team, customer, or assignment.',
     beginnerLesson:
@@ -31,7 +31,7 @@ export const missions = [
     betterExample:
       'Tell AI the update is for your manager, should be brief and professional, and must honestly mention two tasks delayed until Friday.',
     practiceGoal:
-      'Choose the context an AI tool needs to support the task without oversharing.',
+      'List three pieces of context that would help AI answer well, then remove anything private, unnecessary, or distracting.',
     workplaceRule:
       'Give the AI the job-relevant context, but leave out details that are not needed.',
   },
@@ -40,17 +40,17 @@ export const missions = [
     title: 'Hallucination Hunt',
     skill: 'Evaluate',
     shortDescription:
-      'Spot AI output that sounds confident but still needs checking before use.',
+      'Spot confident AI claims that need verification before sharing them in a workplace setting.',
     whyItMatters:
-      'AI can make mistakes while sounding sure. It can also miss bias, fairness concerns, or details that affect real people.',
+      'Confident AI wording is not proof. Mistakes, missing context, or unfair assumptions can affect real people and workplace decisions.',
     beginnerLesson:
-      'Treat AI answers as a draft, not proof. Check names, numbers, dates, policies, claims, and whether the answer could unfairly affect someone.',
+      'Treat AI answers as a draft, not proof. Check names, dates, numbers, policies, quotes, sources, and claims that affect decisions or people.',
     badExample:
       'Use the AI summary as-is in a client slide because it sounds polished.',
     betterExample:
-      'Use the AI summary as a starting point, then verify the statistics against the original report before adding them to the slide.',
+      'Use the AI summary as a starting point, then verify the statistics, sources, and whether the wording could exclude or misrepresent someone.',
     practiceGoal:
-      'Identify which parts of an AI output need fact-checking or fairness review before they are shared.',
+      'Look at an AI answer and mark anything to check before sharing: names, dates, numbers, policies, quotes, sources, claims that affect people, and who could be excluded or misrepresented.',
     workplaceRule:
       'Trust your verification process more than the confidence of the AI response.',
   },
@@ -59,7 +59,7 @@ export const missions = [
     title: 'Privacy Shield',
     skill: 'Protect',
     shortDescription:
-      'Decide what information should be removed before using an AI tool.',
+      'Practice removing sensitive customer, employee, personal, or company information from prompts.',
     whyItMatters:
       'Workplace information can include private, sensitive, or identifying details. Beginners need habits that protect people and organizations.',
     beginnerLesson:
@@ -69,7 +69,7 @@ export const missions = [
     betterExample:
       'Replace personal details with labels like Customer A and summarize only the issue needed for drafting a response.',
     practiceGoal:
-      'Spot sensitive details and keep the AI request useful without exposing private information.',
+      'Rewrite a risky prompt by removing names, emails, IDs, private company details, and anything the AI does not need.',
     workplaceRule:
       'Use the least personal information needed to complete the task.',
   },
@@ -78,17 +78,17 @@ export const missions = [
     title: 'Human Judgment Check',
     skill: 'Decide',
     shortDescription:
-      'Choose when AI can help and when a person needs to make the final call.',
+      'Decide when AI can draft or assist, and when human review is required before action.',
     whyItMatters:
-      'AI can be useful for drafts, options, summaries, and practice. People are still responsible for choices that affect safety, fairness, money, or opportunity.',
+      'AI can help with drafting, summarizing, brainstorming, rewriting, explaining, comparing options, and making checklists. People are still responsible for choices with real consequences.',
     beginnerLesson:
-      "Use AI for support when the risk is low or when you need a starting point. Get human review when the decision involves safety, fairness, policy, money, or someone's opportunity.",
+      'Use AI for support when the risk is low or you need a starting point. A person must lead when accuracy, privacy, fairness, policy, safety, or real consequences matter.',
     badExample:
       'Let AI decide which applicant should get an interview based only on pasted resumes.',
     betterExample:
-      "Ask AI to summarize interview criteria, then have a trained person review each applicant using the team's approved process.",
+      "Ask AI to turn approved interview criteria into a checklist, then have a trained person review each applicant using the team's process.",
     practiceGoal:
-      'Decide whether a task is safe for AI help or needs human review before action.',
+      'Decide whether AI should draft, assist, or stay out. Ask: Who could be affected? What needs verification? Who owns the final decision?',
     workplaceRule:
       'AI can assist with thinking, but humans own the decision and its impact.',
   },

@@ -4,6 +4,15 @@ import './App.css'
 
 const skills = ['Direct', 'Context', 'Evaluate', 'Protect', 'Decide']
 
+const fluencyLoop = [
+  { name: 'Use', definition: 'Know when AI can help.' },
+  { name: 'Direct', definition: 'Give a clear task.' },
+  { name: 'Context', definition: 'Add useful background.' },
+  { name: 'Evaluate', definition: 'Check the answer.' },
+  { name: 'Protect', definition: 'Keep sensitive data out.' },
+  { name: 'Decide', definition: 'Keep humans accountable.' },
+]
+
 function App() {
   const [selectedMission, setSelectedMission] = useState(null)
   const shouldScrollToMap = useRef(false)
@@ -89,11 +98,11 @@ function App() {
               <h2 id="try-heading">Practice goal</h2>
               <p>{selectedMission.practiceGoal}</p>
               <button type="button" className="disabled-button" disabled>
-                Practice challenge coming soon
+                Practice coming soon
               </button>
               <p className="coming-soon-help">
-                Interactive practice is coming next. For now, read the goal and
-                think about how you would apply this skill at work.
+                Use the Try prompt above for now. Interactive practice and
+                scoring are planned next.
               </p>
             </section>
 
@@ -139,6 +148,26 @@ function App() {
         </aside>
       </section>
 
+      <section className="fluency-loop" aria-labelledby="loop-heading">
+        <div className="section-heading">
+          <p className="section-kicker">AI Fluency Loop</p>
+          <h2 id="loop-heading">A simple framework for using AI well</h2>
+          <p>
+            PromptQuest teaches six habits beginners can use before, during,
+            and after working with AI.
+          </p>
+        </div>
+
+        <div className="loop-list">
+          {fluencyLoop.map((step) => (
+            <div className="loop-step" key={step.name}>
+              <strong>{step.name}</strong>
+              <p>{step.definition}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="skill-meter" aria-labelledby="skills-heading">
         <div>
           <p className="section-kicker">Skill meter</p>
@@ -164,6 +193,10 @@ function App() {
             Open a mission to learn through Learn, See, Try, and Reflect before
             interactive practice and scoring are added.
           </p>
+          <p>
+            Each mission teaches a workplace AI habit you can use in school,
+            internships, job searches, and early-career roles.
+          </p>
           <p className="unlock-note">Interactive challenges unlock soon.</p>
         </div>
 
@@ -187,6 +220,20 @@ function App() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="codex-note" aria-labelledby="version-heading">
+        <p className="section-kicker">Current version</p>
+        <h2 id="version-heading">What works now and what is coming next</h2>
+        <p>
+          Current version: Five guided AI fluency missions. Learn, See, Try, and
+          Reflect learning flow. Skills covered: Direct, Context, Evaluate,
+          Protect, Decide.
+        </p>
+        <p>
+          Coming next: Interactive practice challenges. Skill feedback. Progress
+          tracking. AI Fluency Passport. Role-based workplace practice paths.
+        </p>
       </section>
 
       <section className="codex-note" aria-labelledby="codex-heading">
