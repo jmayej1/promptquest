@@ -1,0 +1,255 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 48px;
+  text-align: left;
+}
+
+.landing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+  gap: 32px;
+  align-items: center;
+  min-height: 72svh;
+}
+
+.landing-copy {
+  max-width: 760px;
+}
+
+.eyebrow,
+.section-kicker,
+.preview-label,
+.mission-number {
+  color: #17463e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.pitch {
+  max-width: 680px;
+  color: var(--text);
+  font-size: 1.16rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.primary-button {
+  align-items: center;
+  background: #143d36;
+  border: 2px solid #143d36;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font: 700 1rem/1 var(--sans);
+  min-height: 48px;
+  padding: 0 22px;
+}
+
+.primary-button:hover {
+  background: #0f2f2a;
+}
+
+.primary-button:focus-visible,
+.mission-card:focus-within {
+  outline: 3px solid #f2b84b;
+  outline-offset: 3px;
+}
+
+.progress-preview,
+.codex-note {
+  background: #f8fbf8;
+  border: 1px solid #dbe7de;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.progress-preview {
+  box-shadow: 0 18px 48px rgba(20, 61, 54, 0.1);
+}
+
+.progress-preview strong {
+  color: #111827;
+  display: block;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.progress-help {
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.progress-track,
+.mini-meter {
+  background: #dfe8e2;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-track {
+  height: 12px;
+  margin: 20px 0;
+}
+
+.progress-track span {
+  background: #f2b84b;
+  display: block;
+  height: 100%;
+  width: 0;
+}
+
+.skill-meter {
+  align-items: start;
+  border-block: 1px solid var(--border);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  padding-block: 32px;
+}
+
+.skill-list {
+  display: grid;
+  gap: 12px;
+}
+
+.skill-pill {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 120px 1fr;
+  padding: 14px 16px;
+}
+
+.skill-pill span {
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.mini-meter {
+  height: 8px;
+}
+
+.mini-meter span {
+  background: #5b8f85;
+  display: block;
+  height: 100%;
+  width: 18%;
+}
+
+.mission-section {
+  scroll-margin-top: 24px;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.unlock-note {
+  color: #17463e;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.mission-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.mission-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 20px;
+}
+
+.mission-card-header {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.preview-badge {
+  background: #e8f2ee;
+  border: 1px solid #b9d6cc;
+  border-radius: 999px;
+  color: #17463e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 5px 9px;
+}
+
+.mission-card h3 {
+  color: #111827;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.mission-card p {
+  color: #334155;
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.skill-tag {
+  align-self: flex-start;
+  background: #fff4d7;
+  border-radius: 999px;
+  color: #563800;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 18px;
+  padding: 6px 10px;
+}
+
+.codex-note {
+  max-width: 780px;
+}
+
+@media (max-width: 1080px) {
+  .mission-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    gap: 32px;
+    padding: 28px 20px;
+  }
+
+  .landing,
+  .skill-meter {
+    grid-template-columns: 1fr;
+  }
+
+  .landing {
+    min-height: auto;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-pill {
+    grid-template-columns: 1fr;
+  }
+}
