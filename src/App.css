@@ -1,17 +1,37 @@
+:root {
+  --text: #5f6b7a;
+  --text-h: #172033;
+  --bg: #f7f8fc;
+  --border: #dbe2ef;
+  --accent: #4f46e5;
+  --accent-bg: #eef2ff;
+  --accent-border: #a5b4fc;
+  --social-bg: #ffffff;
+}
+
+body {
+  background: #f7f8fc;
+}
+
+#root {
+  background: #f7f8fc;
+  border-inline: none;
+}
+
 .app-shell {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 48px;
+  gap: clamp(28px, 4vw, 44px);
+  padding: clamp(24px, 5vw, 56px);
   text-align: left;
 }
 
 .landing {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
-  gap: 32px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: clamp(24px, 4vw, 40px);
   align-items: center;
-  min-height: 72svh;
+  min-height: min(72svh, 680px);
 }
 
 .landing-copy {
@@ -22,7 +42,7 @@
 .section-kicker,
 .preview-label,
 .mission-number {
-  color: #17463e;
+  color: #0f766e;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -32,16 +52,16 @@
 
 .pitch {
   max-width: 680px;
-  color: var(--text);
-  font-size: 1.16rem;
+  color: #5f6b7a;
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
   line-height: 1.6;
   margin-bottom: 28px;
 }
 
 .primary-button {
   align-items: center;
-  background: #143d36;
-  border: 2px solid #143d36;
+  background: #4f46e5;
+  border: 2px solid #4f46e5;
   border-radius: 8px;
   color: #ffffff;
   cursor: pointer;
@@ -52,42 +72,64 @@
 }
 
 .primary-button:hover {
-  background: #0f2f2a;
+  background: #3730a3;
+  border-color: #3730a3;
 }
 
 .primary-button:focus-visible,
-.mission-card:focus-within {
-  outline: 3px solid #f2b84b;
+.secondary-button:focus-visible,
+.card-button:focus-visible {
+  outline: 3px solid #14b8a6;
   outline-offset: 3px;
+}
+
+.secondary-button {
+  align-self: flex-start;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  color: #3730a3;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  font: 700 1rem/1 var(--sans);
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+.secondary-button:hover {
+  background: #eef2ff;
 }
 
 .progress-preview,
 .codex-note {
-  background: #f8fbf8;
+  background: #ffffff;
   border: 1px solid #dbe7de;
   border-radius: 8px;
-  padding: 24px;
+  padding: clamp(20px, 3vw, 28px);
 }
 
 .progress-preview {
-  box-shadow: 0 18px 48px rgba(20, 61, 54, 0.1);
+  border-color: #dbe2ef;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.1);
 }
 
 .progress-preview strong {
-  color: #111827;
+  color: #172033;
   display: block;
   font-size: 1.35rem;
   line-height: 1.25;
 }
 
 .progress-help {
-  color: #334155;
+  color: #5f6b7a;
   font-size: 0.95rem;
 }
 
 .progress-track,
 .mini-meter {
-  background: #dfe8e2;
+  background: #e5e7f0;
   border-radius: 999px;
   overflow: hidden;
 }
@@ -98,7 +140,7 @@
 }
 
 .progress-track span {
-  background: #f2b84b;
+  background: #14b8a6;
   display: block;
   height: 100%;
   width: 0;
@@ -106,31 +148,32 @@
 
 .skill-meter {
   align-items: start;
-  border-block: 1px solid var(--border);
+  border-block: 1px solid #dbe2ef;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
   padding-block: 32px;
 }
 
 .skill-list {
   display: grid;
   gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .skill-pill {
   align-items: center;
   background: #ffffff;
-  border: 1px solid var(--border);
+  border: 1px solid #dbe2ef;
   border-radius: 8px;
   display: grid;
   gap: 14px;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: minmax(96px, max-content) 1fr;
   padding: 14px 16px;
 }
 
 .skill-pill span {
-  color: var(--text-h);
+  color: #172033;
   font-weight: 700;
 }
 
@@ -139,10 +182,10 @@
 }
 
 .mini-meter span {
-  background: #5b8f85;
+  background: #14b8a6;
   display: block;
   height: 100%;
-  width: 18%;
+  width: 0;
 }
 
 .mission-section {
@@ -155,7 +198,7 @@
 }
 
 .unlock-note {
-  color: #17463e;
+  color: #3730a3;
   font-size: 0.95rem;
   font-weight: 700;
   margin-top: 12px;
@@ -164,17 +207,29 @@
 .mission-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
 .mission-card {
   background: #ffffff;
-  border: 1px solid var(--border);
+  border: 1px solid #dbe2ef;
   border-radius: 8px;
+  color: inherit;
   display: flex;
   flex-direction: column;
-  min-height: 230px;
-  padding: 20px;
+  min-height: 240px;
+  padding: clamp(18px, 2.5vw, 22px);
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mission-card:hover {
+  border-color: #a5b4fc;
+  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.1);
+  transform: translateY(-2px);
 }
 
 .mission-card-header {
@@ -186,24 +241,24 @@
 }
 
 .preview-badge {
-  background: #e8f2ee;
-  border: 1px solid #b9d6cc;
+  background: #ccfbf1;
+  border: 1px solid #5eead4;
   border-radius: 999px;
-  color: #17463e;
+  color: #0f766e;
   font-size: 0.78rem;
   font-weight: 800;
   padding: 5px 9px;
 }
 
 .mission-card h3 {
-  color: #111827;
+  color: #172033;
   font-size: 1.2rem;
   line-height: 1.2;
   margin: 0 0 12px;
 }
 
 .mission-card p {
-  color: #334155;
+  color: #5f6b7a;
   flex: 1;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -213,29 +268,153 @@
   align-self: flex-start;
   background: #fff4d7;
   border-radius: 999px;
-  color: #563800;
+  color: #6b4b00;
   font-size: 0.85rem;
   font-weight: 700;
   margin-top: 18px;
   padding: 6px 10px;
 }
 
+.card-button {
+  align-self: flex-start;
+  background: #4f46e5;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font: 700 0.95rem/1 var(--sans);
+  margin-top: 18px;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.card-button:hover {
+  background: #3730a3;
+  border-color: #3730a3;
+}
+
 .codex-note {
+  border-color: #dbe2ef;
+  box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
   max-width: 780px;
 }
 
-@media (max-width: 1080px) {
-  .mission-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.learning-screen {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3vw, 30px);
 }
 
-@media (max-width: 760px) {
-  .app-shell {
-    gap: 32px;
-    padding: 28px 20px;
-  }
+.learning-hero {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 34px);
+}
 
+.learning-hero h1 {
+  color: #172033;
+  margin-top: 0;
+}
+
+.learning-hero p:last-child {
+  color: #5f6b7a;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.learning-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.learning-panel {
+  background: #ffffff;
+  border: 1px solid #dbe2ef;
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 26px);
+}
+
+.learning-panel h2 {
+  color: #172033;
+  margin-bottom: 14px;
+}
+
+.learning-panel p {
+  color: #5f6b7a;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.step-label {
+  color: #0f766e;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.example-box {
+  border-radius: 8px;
+  margin-top: 14px;
+  padding: clamp(14px, 2.5vw, 18px);
+}
+
+.example-box span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.example-box p {
+  color: #172033;
+  margin: 0;
+}
+
+.example-box-bad {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+.example-box-bad span {
+  color: #9a3412;
+}
+
+.example-box-better {
+  background: #ecfeff;
+  border: 1px solid #99f6e4;
+}
+
+.example-box-better span {
+  color: #0f766e;
+}
+
+.disabled-button {
+  background: #e5e7eb;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  color: #475569;
+  cursor: not-allowed;
+  font: 700 1rem/1 var(--sans);
+  margin-top: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+}
+
+.coming-soon-help {
+  font-size: 0.92rem;
+  margin-top: 12px;
+}
+
+.rule-panel {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+@media (max-width: 900px) {
   .landing,
   .skill-meter {
     grid-template-columns: 1fr;
@@ -244,12 +423,43 @@
   .landing {
     min-height: auto;
   }
+}
 
-  .mission-grid {
+@media (max-width: 760px) {
+  .app-shell {
+    gap: 30px;
+    padding-inline: 20px;
+  }
+
+  .mission-grid,
+  .learning-grid {
     grid-template-columns: 1fr;
   }
 
+  .skill-list,
   .skill-pill {
     grid-template-columns: 1fr;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .card-button,
+  .disabled-button {
+    width: 100%;
+  }
+
+  .mission-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-shell {
+    padding-inline: 16px;
+  }
+
+  .mission-card-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
